@@ -43,18 +43,19 @@ LIB_DIR = lib/
 
 PKG_NAME = pkg-name
 
-SOURCES = \
-	src/double_sided_driven_cavity.cpp
+SOURCES = src/double_sided_driven_cavity.cpp \
+	src/top_sided_driven_cavity.cpp
 
 
 # exemple: HEADERS = include/pkg-name/test.hpp
 HEADERS = 
 
-BIN = bin/double_sided_driven_cavity
-
+BIN = bin/double_sided_driven_cavity \
+      bin/top_sided_driven_cavity
 
 #bin/...: ...
 bin/double_sided_driven_cavity: build/src/double_sided_driven_cavity.o
+bin/top_sided_driven_cavity: build/src/top_sided_driven_cavity.o
 
 # exemple: LIB = lib/libtest.a
 LIB = 
